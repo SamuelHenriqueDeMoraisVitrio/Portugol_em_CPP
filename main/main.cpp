@@ -3,9 +3,13 @@
 #include <iostream>
 #include <string>
 
+void leia();
+void escreva();
+
 enum tips { INTEIRO, PEQUENO, LONGO, REAL, DOBRO, CARACTER, CADEIA, BOLEANO };
 
 void leia(const std::string requestValue, tips typing, void *input) {
+  //void *input{&inputValue};
   std::cout << requestValue;
 
   switch (typing) {
@@ -36,6 +40,11 @@ void leia(const std::string requestValue, tips typing, void *input) {
   }
 }
 
+template <typename... Args>
+void escreva(Args... args) {
+  (std::cout << ... << args);
+}
+
 int main(int argc, char *argv[]) {
   std::cout << "Hello Word" << '\n';
 
@@ -43,7 +52,9 @@ int main(int argc, char *argv[]) {
 
   leia("Qual seu nome? ", CADEIA, &ler);
 
-  std::cout << ler << std::endl;
+  //std::cout << ler << std::endl;
+  //
+  escreva("Hello word\t", 15, 21, '\n');
 
   return 0;
 }

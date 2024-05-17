@@ -3,13 +3,14 @@
     "arguments": [
       "/usr/bin/clang++",
       "-c",
+      "-std=c++20",
       "-o",
       "EXE",
       "main/main.cpp"
     ],
-    "directory": "/home/samuel/Documentos/proc/cpp/lib/escoll",
-    "file": "/home/samuel/Documentos/proc/cpp/lib/escoll/main/main.cpp",
-    "output": "/home/samuel/Documentos/proc/cpp/lib/escoll/EXE"
+    "directory": "/home/samuel/Documentos/proc/cpp/lib/escoll/Portugol_em_CPP",
+    "file": "/home/samuel/Documentos/proc/cpp/lib/escoll/Portugol_em_CPP/main/main.cpp",
+    "output": "/home/samuel/Documentos/proc/cpp/lib/escoll/Portugol_em_CPP/EXE"
   },
   {
     "arguments": [
@@ -43,7 +44,7 @@
       "-mllvm",
       "-treat-scalable-fixed-error-as-warning",
       "-debugger-tuning=gdb",
-      "-fcoverage-compilation-dir=/home/samuel/Documentos/proc/cpp/lib/escoll",
+      "-fcoverage-compilation-dir=/home/samuel/Documentos/proc/cpp/lib/escoll/Portugol_em_CPP",
       "-resource-dir",
       "/usr/lib/llvm-14/lib/clang/14.0.0",
       "-internal-isystem",
@@ -64,11 +65,13 @@
       "/include",
       "-internal-externc-isystem",
       "/usr/include",
+      "-std=c++20",
       "-fdeprecated-macro",
-      "-fdebug-compilation-dir=/home/samuel/Documentos/proc/cpp/lib/escoll",
+      "-fdebug-compilation-dir=/home/samuel/Documentos/proc/cpp/lib/escoll/Portugol_em_CPP",
       "-ferror-limit",
       "19",
       "-fgnuc-version=4.2.1",
+      "-fno-implicit-modules",
       "-fcxx-exceptions",
       "-fexceptions",
       "-fcolor-diagnostics",
@@ -77,11 +80,11 @@
       "-x",
       "c++",
       "-o",
-      "/tmp/main-db6a51.o",
+      "/tmp/main-bb9991.o",
       "main/main.cpp"
     ],
-    "directory": "/home/samuel/Documentos/proc/cpp/lib/escoll",
-    "file": "/home/samuel/Documentos/proc/cpp/lib/escoll/main/main.cpp",
-    "output": "/tmp/main-db6a51.o"
+    "directory": "/home/samuel/Documentos/proc/cpp/lib/escoll/Portugol_em_CPP",
+    "file": "/home/samuel/Documentos/proc/cpp/lib/escoll/Portugol_em_CPP/main/main.cpp",
+    "output": "/tmp/main-bb9991.o"
   }
 ]
