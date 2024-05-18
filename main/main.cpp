@@ -1,4 +1,4 @@
-#include <sys/types.h>
+//#include <sys/types.h>
 
 #include <iostream>
 #include <sstream>
@@ -19,16 +19,18 @@ void leia(const std::string& requestValue, value& outputValue) {
     if (inPT >> outputValue && inPT.eof()) {
       break;
     } else {
-      std::cout << "Entrada inválida. Tente novamente." << std::endl;
+      std::cout << "Entrada inválida. Tente novamente.\n";
     }
   }
 }
 
+/*
 template <>
 void leia<std::string>(const std::string& requestValue, std::string& outputValue) {
   std::cout << requestValue;
   std::getline(std::cin, outputValue);
 }
+*/
 
 template <>
 void leia<bool>(const std::string& requestValue, bool& outputValue) {
@@ -44,8 +46,7 @@ void leia<bool>(const std::string& requestValue, bool& outputValue) {
       outputValue = false;
       break;
     } else {
-      std::cout << "Entrada inválida. Digite 1 ou true para verdadeiro, 0 ou false para falso."
-                << std::endl;
+      std::cout << "Entrada inválida. Digite 1 ou true para verdadeiro, 0 ou false para falso.\n";
     }
   }
 }
@@ -59,10 +60,14 @@ int main(int argc, char* argv[]) {
   std::cout << "Hello Word" << '\n';
 
   std::string ler;
+  short idade;
 
   leia("Qual seu nome: ", ler);
+  escreva('\n');
+  leia("Qual sua idade: ", idade);
+  escreva('\n');
 
-  escreva("Hello word\t", 15, 21, '\n');
+  escreva("\n\tSeu nome é: ", ler, "\n\tE sua idade é: ", idade);
 
   return 0;
 }
