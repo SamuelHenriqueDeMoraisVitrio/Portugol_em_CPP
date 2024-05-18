@@ -1,42 +1,52 @@
 #include <sys/types.h>
 
 #include <iostream>
+#include <sstream>
 #include <string>
 
 void leia();
 void escreva();
 
-enum tips { INTEIRO, PEQUENO, LONGO, REAL, DOBRO, CARACTER, CADEIA, BOLEANO };
+template <typename value>
+void leia(const std::string& requestValue, value& outputValue) {
+  std::string input;
 
-void leia(const std::string requestValue, tips typing, void *input) {
-  //void *input{&inputValue};
+  while (true) {
+    std::cout << requestValue;
+    std::getline(std::cin, input);
+    std::stringstream inPT(input);
+
+    if (inPT >> outputValue && inPT.eof()) {
+      break;
+    } else {
+      std::cout << "Entrada inválida. Tente novamente." << std::endl;
+    }
+  }
+}
+
+template <>
+void leia<std::string>(const std::string& requestValue, std::string& outputValue) {
   std::cout << requestValue;
+  std::getline(std::cin, outputValue);
+}
 
-  switch (typing) {
-    case INTEIRO:
-      std::cin >> *static_cast<int *>(input);
+template <>
+void leia<bool>(const std::string& requestValue, bool& outputValue) {
+  while (true) {
+    std::string input;
+    std::cout << requestValue;
+    std::getline(std::cin, input);
+
+    if (input == "1" || input == "true" || input == "True") {
+      outputValue = true;
       break;
-    case PEQUENO:
-      std::cin >> *static_cast<short *>(input);
+    } else if (input == "0" || input == "false" || input == "False") {
+      outputValue = false;
       break;
-    case LONGO:
-      std::cin >> *static_cast<long *>(input);
-      break;
-    case REAL:
-      std::cin >> *static_cast<float *>(input);
-      break;
-    case DOBRO:
-      std::cin >> *static_cast<double *>(input);
-      break;
-    case CARACTER:
-      std::cin >> *static_cast<char *>(input);
-      break;
-    case CADEIA:
-      std::cin >> *static_cast<std::string *>(input);
-      break;
-    case BOLEANO:
-      std::cin >> *static_cast<bool *>(input);
-      break;
+    } else {
+      std::cout << "Entrada inválida. Digite 1 ou true para verdadeiro, 0 ou false para falso."
+                << std::endl;
+    }
   }
 }
 
@@ -45,15 +55,13 @@ void escreva(Args... args) {
   (std::cout << ... << args);
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
   std::cout << "Hello Word" << '\n';
 
   std::string ler;
 
-  leia("Qual seu nome? ", CADEIA, &ler);
+  leia("Qual seu nome: ", ler);
 
-  //std::cout << ler << std::endl;
-  //
   escreva("Hello word\t", 15, 21, '\n');
 
   return 0;
