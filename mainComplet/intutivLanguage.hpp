@@ -3,15 +3,17 @@
 
 //#include <sys/types.h>
 
+//function main
+#define inicio() main()
 //Loop conditional
 #define enquato while
-#define faca do
 #define para for
 //conditional
 #define se if
 #define senao else
 #define escolha switch
 #define caso case
+#define casocontrario default
 //structs of recurrence
 #define pare break
 #define continua continue
@@ -66,10 +68,15 @@ void leia<bool>(const cadeia& requestValue, bool& outputValue) {  // case bool
     std::cout << requestValue;
     std::getline(std::cin, input);
 
-    if (input == "1" || input == "true" || input == "True") {
+    if (input == "1" || input == "verdadeiro" || input == "Verdadeiro" || input == "VERDADEIRO" ||
+        input == "verdade" || input == "Verdade" || input == "VERDADE" || input == "true" ||
+        input == "True" || input == "TRUE" || input == "sim" || input == "Sim" || input == "SIM") {
       outputValue = true;
       break;
-    } else if (input == "0" || input == "false" || input == "False") {
+    } else if (input == "0" || input == "false" || input == "False" || input == "FALSE" ||
+               input == "falso" || input == "Falso" || input == "FALSO" || input == "Mentira" ||
+               input == "mentira" || input == "MENTIRA" || input == "não" || input == "Não" ||
+               input == "NÃO" || input == "nao" || input == "NAO" || input == "Nao") {
       outputValue = false;
       break;
     } else {
