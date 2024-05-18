@@ -1,30 +1,34 @@
+#ifndef __I_O_hpp__
+#define __I_O_hpp__
+
 //#include <sys/types.h>
 
 #include <iostream>
 #include <sstream>
 #include <string>
 
-using std::string;
+using std::string;  //std::string == string
 
 void leia();
 void escreva();
 
-template <typename value>
+template <typename value>  // tipename value
 void leia(const string& requestValue, value& outputValue) {
   string input;
 
-  while (true) {
-    std::cout << requestValue;
-    std::getline(std::cin, input);
-    std::stringstream inPT(input);
+  while (true) {                    //While input == NULL or error
+    std::cout << requestValue;      // print requestValue
+    std::getline(std::cin, input);  //read terminal
+    std::stringstream inPT(input);  // create object inPT
 
-    if (inPT >> outputValue && inPT.eof()) {
+    if (inPT >> outputValue &&
+        inPT.eof()) {  // if inPT is saved in outputValue and inPT he was correct, break
       break;
-    } else {
+    } else {  // else continue
       std::cout << "Entrada inválida. Tente novamente.\n";
-    }
-  }
-}
+    }  // else
+  }    // while
+}  // void leia
 
 /*
 template <>
@@ -35,7 +39,7 @@ void leia<string>(const string& requestValue, string& outputValue) {
 */
 
 template <>
-void leia<bool>(const string& requestValue, bool& outputValue) {
+void leia<bool>(const string& requestValue, bool& outputValue) {  // case bool
   while (true) {
     string input;
     std::cout << requestValue;
@@ -57,3 +61,5 @@ template <typename... Args>
 void escreva(Args... args) {
   (std::cout << ... << args);
 }
+
+#endif
