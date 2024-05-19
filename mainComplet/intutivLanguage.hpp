@@ -3,8 +3,6 @@
 
 //#include <sys/types.h>
 
-//function main
-#define inicio() main()
 //Loop conditional
 #define enquato while
 #define para for
