@@ -1,8 +1,9 @@
-#include "I_O.hpp"
+
+
 
 template <typename value>  // tipename value
-void leia(const string& requestValue, value& outputValue) {
-  string input;
+void leia(const cadeia& requestValue, value& outputValue) {
+  cadeia input;
 
   while (true) {                    //While input == NULL or error
     std::cout << requestValue;      // print requestValue
@@ -20,23 +21,28 @@ void leia(const string& requestValue, value& outputValue) {
 
 /*
 template <>
-void leia<string>(const string& requestValue, string& outputValue) {
+void leia<cadeia>(const string& requestValue, string& outputValue) {
   std::cout << requestValue;
   std::getline(std::cin, outputValue);
 }
 */
 
 template <>
-void leia<bool>(const string& requestValue, bool& outputValue) {  // case bool
+void leia<bool>(const cadeia& requestValue, bool& outputValue) {  // case bool
   while (true) {
-    string input;
+    cadeia input;
     std::cout << requestValue;
     std::getline(std::cin, input);
 
-    if (input == "1" || input == "true" || input == "True") {
+    if (input == "1" || input == "verdadeiro" || input == "Verdadeiro" || input == "VERDADEIRO" ||
+        input == "verdade" || input == "Verdade" || input == "VERDADE" || input == "true" ||
+        input == "True" || input == "TRUE" || input == "sim" || input == "Sim" || input == "SIM") {
       outputValue = true;
       break;
-    } else if (input == "0" || input == "false" || input == "False") {
+    } else if (input == "0" || input == "false" || input == "False" || input == "FALSE" ||
+               input == "falso" || input == "Falso" || input == "FALSO" || input == "Mentira" ||
+               input == "mentira" || input == "MENTIRA" || input == "não" || input == "Não" ||
+               input == "NÃO" || input == "nao" || input == "NAO" || input == "Nao") {
       outputValue = false;
       break;
     } else {
@@ -48,8 +54,4 @@ void leia<bool>(const string& requestValue, bool& outputValue) {  // case bool
 template <typename... Args>
 void escreva(Args... args) {
   (std::cout << ... << args);
-}
-
-int main(int argc, char* argv[]) {
-  return 0;
 }

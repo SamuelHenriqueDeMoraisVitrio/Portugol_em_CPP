@@ -1,7 +1,12 @@
 #ifndef __I_O_HPP__
 #define __I_O_HPP__
 
-//#include <sys/types.h>
+#include <iostream>
+#include <sstream>
+#include <string>
+
+
+
 
 //Loop conditional
 #define enquato while
@@ -17,9 +22,8 @@
 #define continua continue
 #define retorne return
 
-#include <iostream>
-#include <sstream>
-#include <string>
+
+
 
 using inteiro = int;
 using pequeno = short;
@@ -30,8 +34,14 @@ using caracter = char;
 using cadeia = std::string;  //std::string == string
 using boleano = bool;
 
+
+
+
 void leia();
 void escreva();
+
+
+
 
 template <typename value>  // tipename value
 void leia(const cadeia& requestValue, value& outputValue) {

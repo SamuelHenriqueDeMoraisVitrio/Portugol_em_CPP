@@ -1,0 +1,4 @@
+
+
+void leia();
+void escreva();
