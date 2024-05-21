@@ -1,3 +1,11 @@
 
 */__pycache__
 *.pyc
+
+compile_commands.json
+
+readme
+
+Makefile
+
+

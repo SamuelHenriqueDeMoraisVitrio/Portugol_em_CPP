@@ -5,8 +5,8 @@
 #include <sstream>
 #include <string>
 
-#include "macros.hpp"
-#include "tipos.hpp"
-#include "io/io.hpp"
+#include "newLanguage/macros.hpp"
+#include "newLanguage/tipos.hpp"
 #include "io/io.cpp"
+#include "io/io.hpp"
 #endif

@@ -37,11 +37,6 @@ using boleano = bool;
 
 
 
-void leia();
-void escreva();
-
-
-
 
 template <typename value>  // tipename value
 void leia(const cadeia& requestValue, value& outputValue) {
@@ -98,4 +93,9 @@ void escreva(Args... args) {
   (std::cout << ... << args);
 }
 
+
+
+
+void leia();
+void escreva();
 #endif
