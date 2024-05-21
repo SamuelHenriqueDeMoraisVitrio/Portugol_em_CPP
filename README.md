@@ -20,7 +20,7 @@ Ir no repositório da biblioteca e clicar em Release/versões:.
 
 ![frame photo versions](readme/imgRealeases.png)
 
-E baixar a versão mais recente do `PortugolCPP.hpp`.
+E baixar a versão mais recente do `intuitivLanguage.hpp`.
 
 Quando terminar de baixar, você deve mover o arquivo baixado para o diretório onde está o projeto em que você está trabalhando.
 
