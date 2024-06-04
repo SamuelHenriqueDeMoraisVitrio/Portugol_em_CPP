@@ -4,6 +4,10 @@ NOME = EXE
 START = echo "" && echo "Compilação concluida. Iniciando..." && echo "" && echo "" && ./$(NOME) && echo ""
 FILE ?= main.cpp
 
+compact: clear
+	@python3 build.py
+	@echo ""
+
 all: clear
 	$(COMP) $(OPC) -o $(NOME) $(FILE)
 	@$(START)

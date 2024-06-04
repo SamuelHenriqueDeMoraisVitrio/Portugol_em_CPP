@@ -2,8 +2,8 @@
 
 
 template <typename value>  // tipename value
-void leia(const cadeia& requestValue, value& outputValue) {
-  cadeia input;
+void leia(const std::string &requestValue, value &outputValue) {
+  std::string input;
 
   while (true) {                    //While input == NULL or error
     std::cout << requestValue;      // print requestValue
@@ -28,9 +28,9 @@ void leia<cadeia>(const string& requestValue, string& outputValue) {
 */
 
 template <>
-void leia<bool>(const cadeia& requestValue, bool& outputValue) {  // case bool
+void leia<bool>(const std::string& requestValue, bool& outputValue) {  // case bool
   while (true) {
-    cadeia input;
+    std::string input;
     std::cout << requestValue;
     std::getline(std::cin, input);
 

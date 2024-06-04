@@ -27,19 +27,6 @@
 
 
 
-
-using inteiro = int;
-using pequeno = short;
-using longo = long;
-using real = float;
-using duplo = double;
-using caracter = char;
-using cadeia = std::string;  //std::string == string
-using boleano = bool;
-
-
-
-
 void leia();
 void escreva();
 
@@ -56,7 +43,8 @@ void leia(const std::string &requestValue, value &outputValue) {
     std::getline(std::cin, input);  //read terminal
     std::stringstream inPT(input);  // create object inPT
 
-    if (inPT >> outputValue && inPT.eof()) {  // if inPT is saved in outputValue and inPT he was correct, break
+    if (inPT >> outputValue &&
+        inPT.eof()) {  // if inPT is saved in outputValue and inPT he was correct, break
       break;
     } else {  // else continue
       std::cout << "Entrada inválida. Tente novamente.\n";
@@ -73,7 +61,7 @@ void leia<cadeia>(const string& requestValue, string& outputValue) {
 */
 
 template <>
-void leia<bool>(const std::string &requestValue, bool &outputValue) {  // case bool
+void leia<bool>(const std::string& requestValue, bool& outputValue) {  // case bool
   while (true) {
     std::string input;
     std::cout << requestValue;

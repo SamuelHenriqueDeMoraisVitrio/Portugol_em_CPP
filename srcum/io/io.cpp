@@ -1,49 +1,3 @@
-#ifndef __I_O_HPP__
-#define __I_O_HPP__
-
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <vector>
-#include <array>
-#include <map>
-
-
-
-
-//Loop conditional
-#define enquato while
-#define para for
-//conditional
-#define se if
-#define senao else
-#define escolha switch
-#define caso case
-#define casocontrario default
-//structs of recurrence
-#define pare break
-#define continua continue
-#define retorne return
-
-
-
-
-using inteiro = int;
-using pequeno = short;
-using longo = long;
-using real = float;
-using duplo = double;
-using caracter = char;
-using cadeia = std::string;  //std::string == string
-using boleano = bool;
-
-
-
-
-void leia();
-void escreva();
-
-
 
 
 
@@ -100,6 +54,3 @@ template <typename... Args>
 void escreva(Args... args) {
   (std::cout << ... << args);
 }
-
-
-#endif

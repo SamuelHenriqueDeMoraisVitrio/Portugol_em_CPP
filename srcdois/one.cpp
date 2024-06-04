@@ -4,9 +4,13 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <vector>
+#include <array>
+#include <map>
 
 #include "newLanguage/macros.hpp"
-#include "newLanguage/tipos.hpp"
-#include "io/io.cpp"
 #include "io/io.hpp"
+
+#include "io/io.cpp"
+
 #endif
