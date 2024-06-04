@@ -28,11 +28,5 @@ elif versao == "qua":
     ct.generate_amalgamated_code(STARTER, SAIDA)
     print("\n\tDeu certo 4\n\n")
 
-elif versao == "cin":
-    STARTER = f"srccin/one.cpp"
-    SAIDA = "intuitivLanguage5.hpp"
-    ct.generate_amalgamated_code(STARTER, SAIDA)
-    print("\n\tDeu certo 5\n\n")
-
 else:
     print("\n\tVersão não reconhecida.\n\n")
