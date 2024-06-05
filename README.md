@@ -12,6 +12,25 @@
 - Ela ainda está em desenvolvimento, então pode haver erros.
 
 ***
+## VERSÕES
+#### Cada versão tira um grupo dessas funcionalidades apresentadas abaixo, pois essa lib foi feita pensando em alguém com dificuldades de passar do portugol para o cpp.
+
+### Versão main
+- Todas as funcionalidades
+
+### Versão 2
+- Sem tradução de tipos de váriaveis
+
+### Versão 3
+- Sem tradução de tipos de váriaveis
+- Sem tradução das estruturas de controle
+
+### Versão 4
+- Sem tradução de tipos de váriaveis
+- Sem tradução das estruturas de controle
+- Sem funcionalidades I/O
+
+***
 
 ## Como usar a lib?:
 ###	A forma mais simples de usar a lib é:
@@ -27,7 +46,18 @@ Quando terminar de baixar, você deve mover o arquivo baixado para o diretório 
 No seu **"*.cpp"**, você deve incluir o **"*.hpp"**. Pronto, já pode usar todas as funcionalidades da biblioteca.
 
 ---
+## INCLUDES
+#### Essa lib já deixa algumas libs standarts já incluidas automaticamente.
 
+### São elas:
+- iostream
+- sstream
+- string
+- vector
+- array
+- map
+
+---
 ## TRADUÇÕES: 
 ### Tipos de variáveis:
 
